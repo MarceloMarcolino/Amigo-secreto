@@ -10,14 +10,15 @@ function adicionar(){
         lista.textContent = lista.textContent + ', ' + amigo.value;
     }
     amigo.value = '';
+
+    atualizarLista();
+    atualizarSoteio();
 }
 
 function sortear() {
-    embaralha(amigos);
+    embaralhar(amigos);
     let sorteio = document.getElementById('lista-sorteio');
-
     for (let i = 0; i < amigos.length; i++) {
-
         if (i == amigos.length - 1) { 
             sorteio.innerHTML = sorteio.innerHTML + amigos[i] + ' --> ' + amigos[0] + '<br>';  
         } else {
@@ -26,7 +27,13 @@ function sortear() {
     }
 }
 
-function embaralha(lista) {
+function excluirAmigo(index) {
+    amigos.splice(index, 1);
+    atualizarLista();
+    atualizarSorteio();
+}
+
+function embaralhar(lista) {
     for (let indice = lista.length; indice; indice--) {
         const indiceAleatorio = Math.floor(Math.random() * indice);
 
@@ -34,3 +41,51 @@ function embaralha(lista) {
         [lista[indice - 1], lista[indiceAleatorio]] = [lista[indiceAleatorio], lista[indice - 1]];
     }
 }
+
+function atualizarSorteio() {
+    let sorteio = document.getElementById('lista-sorteio');
+    sorteio.innerHTML = '';
+}
+
+function atualizarLista() {
+    let lista = document.getElementById('lista-amigos');
+    lista.innerHTML = '';
+
+    for (let i = 0; i < amigos.length; i++) {
+        // Cria um elemento de parágrafo para cada amigo
+        let paragrafo = document.createElement('p');
+        paragrafo.textContent = amigos[i];
+
+        // Adiciona um evento de clique para excluir o amigo
+        paragrafo.addEventListener('click', function() {
+            excluirAmigo(i);
+        });
+
+        // Adiciona o parágrafo à lista
+        lista.appendChild(paragrafo)
+    }
+}
+
+function reiniciar() {
+    amigos = [];
+    document.getElementById('lista-amigos').innerHTML = '';
+    document.getElementById('lista-sorteio').innerHTML = '';
+}
+
+/*
+DESAFIOS 2 à 5
+*/
+
+// Declarando uma variável do tipo array
+let minhaLista = [];
+
+// Adicionando elementos com push
+minhaLista.push(1, 2, 3);
+console.log("Adicionando elementos:", minhaLista);
+
+// Criando uma nova variável
+let outrosNumeros = [4, 5, 6];
+
+// Concatenando arrays
+let novaLista = minhaLista.concat(outrosNumeros);
+console.log("Juntando Arrays;", novaLista);
