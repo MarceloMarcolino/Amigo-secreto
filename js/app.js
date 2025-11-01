@@ -155,3 +155,14 @@ function verificarIdade(idade) {
 }
 
 console.log(verificarIdade(18));
+
+// Desafio 3
+
+function validarString(texto) {
+    return texto === '' ? "String vazia" : "String não vazia";
+}
+
+console.log(validarString("Aqui há um texto?"));
+console.log(validarString(""));
+
+// Desafio 4
