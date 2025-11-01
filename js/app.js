@@ -199,3 +199,9 @@ function obterTamanhoArray(arr) {
 const minhaListaDesafio = [1,2,3,4,5,6,7,8,9,10];
 
 console.log(obterTamanhoArray(minhaListaDesafio));
+
+// Desafio 7
+
+const meuArray = [10, 20, 30, 40, 50];
+console.log("O array contém o número 30?", meuArray.includes(30));
+//saída esperada: "O array contém o número 30?" true
