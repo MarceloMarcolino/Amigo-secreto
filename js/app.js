@@ -131,3 +131,19 @@ function removerDuplicatas(array) {
 // Testando a função com novaLista
 let novaListaSemDuplicatas = removerDuplicatas(novaLista);
 console.log("Remover duplicatas:", novaListaSemDuplicatas);
+
+// DESAFIOS COMPLEMENTARES
+
+// Desafio 1
+
+function validarNumero(numero) {
+    if (numero > 0) {
+        return "Positivo";
+    } else if (numero < 0) {
+        return "Negativo";
+    } else {
+        return "Zero";
+    }
+}
+
+console.log(validarNumero(-1))
