@@ -7,17 +7,19 @@ function adicionar(){
         return;
     }
 
-    if (amigos.includes(amigo.value)) {
+    let nomeAmigo = amigo.value.toUpperCase();
+
+    if (amigos.includes(nomeAmigo)) {
         alert ('Nome já adicionado!');
         return;
     }
 
     let lista = document.getElementById('lista-amigos');
-    amigos.push(amigo.value);
+    amigos.push(nomeAmigo);
     if (lista.textContent == '') {
-        lista.textContent = amigo.value;
+        lista.textContent = nomeAmigo;
     } else {
-        lista.textContent = lista.textContent + ', ' + amigo.value;
+        lista.textContent = lista.textContent + ', ' + nomeAmigo;
     }
     amigo.value = '';
 
