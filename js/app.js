@@ -226,3 +226,9 @@ if (elementoEstaPresente) {
 } else {
     console.log(`O elemento ${elementoProcurado} não está presente no array.`);
 }
+// Desafio 9
+
+const palavras = ["apple", "banana", "orange", "grape"];
+console.log("A palavra 'banana' está no array?", palavras.includes("banana"));
+
+// saída esperada: "A palavra 'banana' está no array?" true
