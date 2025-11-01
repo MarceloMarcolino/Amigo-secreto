@@ -205,3 +205,24 @@ console.log(obterTamanhoArray(minhaListaDesafio));
 const meuArray = [10, 20, 30, 40, 50];
 console.log("O array contém o número 30?", meuArray.includes(30));
 //saída esperada: "O array contém o número 30?" true
+
+// Desafio 8
+
+// Função que verifica se um elemento está presento no array
+function verificarElementoNoArray(arr, elemento) {
+    return arr.includes(elemento);
+}
+
+// Exemplo de uso
+const meuArrayDesafio = [10, 20, 30, 40, 50];
+const elementoProcurado = 30;
+
+// Utilizando a função para verificar a presença do elemento no array
+const elementoEstaPresente = verificarElementoNoArray(meuArrayDesafio, elementoProcurado);
+
+// Exibindo o resultado
+if (elementoEstaPresente) {
+    console.log(`O elemento ${elementoProcurado} está presente no array.`);
+} else {
+    console.log(`O elemento ${elementoProcurado} não está presente no array.`);
+}
