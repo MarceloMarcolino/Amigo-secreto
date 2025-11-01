@@ -146,4 +146,12 @@ function validarNumero(numero) {
     }
 }
 
-console.log(validarNumero(-1))
+console.log(validarNumero(-1));
+
+// Desafio 2
+
+function verificarIdade(idade) {
+    return idade >= 18 ? "Maior de idade" : "Menor de idade";
+}
+
+console.log(verificarIdade(18));
