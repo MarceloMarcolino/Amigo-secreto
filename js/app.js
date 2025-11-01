@@ -187,3 +187,15 @@ function calcularMedia(num1, num2) {
 }
 
 console.log(calcularMedia(8,5));
+
+// Desafio 6
+
+function obterTamanhoArray(arr) {
+    return arr.length;
+}
+
+// exemplo de uso
+
+const minhaListaDesafio = [1,2,3,4,5,6,7,8,9,10];
+
+console.log(obterTamanhoArray(minhaListaDesafio));
